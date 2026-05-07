@@ -1,18 +1,11 @@
 ---
-title: Documentation
-next: first-page
+title: Wiki
 ---
 
-This is a demo of the theme's documentation layout.
+Welcome to the XXXIRA wiki for **Total Battle · Kingdom 284**. Use the sections below or the sidebar to find what you need.
 
-## Hello, World!
-
-```go {filename="main.go"}
-package main
-
-import "fmt"
-
-func main() {
-    fmt.Println("Hello, World!")
-}
-```
+{{< cards >}}
+  {{< card link="getting-started" title="Getting Started" icon="academic-cap" subtitle="New to Total Battle? Start here." >}}
+  {{< card link="guides" title="Game Guides" icon="book-open" subtitle="Total Battle mechanics and tips." >}}
+  {{< card link="characters" title="Characters" icon="user-group" subtitle="Heroes, captains, and troop types." >}}
+{{< /cards >}}
