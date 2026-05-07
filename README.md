@@ -1,6 +1,6 @@
 # XXXIRA homepage
 
-[🌐 Demo ↗](https://s-limone.github.io/XXXIRA/)
+[🌐 WEBSITE ↗](https://s-limone.github.io/XXXIRA/)
 
 ## Changes
 
