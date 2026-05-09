@@ -1,5 +1,8 @@
 title: XXXIRA Wiki
+languageCode: en-us
+baseURL: https://s-limone.github.io/XXXIRA/
 
+# import hextra as module
 module:
   imports:
     - path: github.com/imfing/hextra
@@ -10,32 +13,98 @@ markup:
       unsafe: true
   highlight:
     noClasses: false
+    style: monokai
 
 menu:
   main:
-    - name: Game Guides
+    - name: 🎮 Game Guides
       pageRef: /docs/guides
       weight: 1
-    - name: Getting Started
+    - name: 🚀 Getting Started
       pageRef: /docs/getting-started
       weight: 2
-    - name: Search
+    - name: 👥 Characters
+      pageRef: /docs/characters
       weight: 3
+    - name: 🔍 Search
+      weight: 4
       params:
         type: search
     - name: GitHub
       weight: 5
       url: "https://github.com/s-limone/XXXIRA"
+      url: "https://github.com/s-limone/XXXIRA"
       params:
         icon: github
 
 params:
+  description: "Official knowledge base for the XXXIRA clan in Total Battle - Kingdom 284. Comprehensive guides, strategies, and resources."
+  
+  # Navbar settings
   navbar:
     displayTitle: true
-    displayLogo: false
+    displayLogo: true
+    logo:
+      path: images/logo.svg
+      dark: images/logo-dark.svg
+      width: 40
+      height: 40
+  
+  # Page settings
+  page:
+    width: wide
+  
+  # Theme settings
+  theme:
+    default: dark
+    displayToggle: true
+  
+  # Footer settings
   footer:
     displayCopyright: false
     displayPoweredBy: true
   editURL:
     enable: true
     base: "https://github.com/s-limone/XXXIRA/edit/main/content"
+  
+  # Search settings
+  search:
+    enable: true
+    type: flexsearch
+    
+  # Social links
+  social:
+    github: "https://github.com/s-limone/XXXIRA"
+  
+  # Analytics (optional - add your tracking ID)
+  # analytics:
+  #   google: "G-XXXXXXXXXX"
+  
+  # Comments (optional)
+  # comments:
+  #   enable: false
+  
+  # Custom CSS
+  customCSS:
+    - css/custom.css
+
+# Taxonomies
+taxonomies:
+  tag: tags
+  category: categories
+
+# Build settings
+build:
+  writeStats: true
+
+# Output formats
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+# Sitemap
+sitemap:
+  changefreq: weekly
+  priority: 0.5
