@@ -38,11 +38,28 @@ menu:
         icon: github
 
 params:
-  description: "Official knowledge base for the XXXIRA clan in Total Battle - Kingdom 284. Comprehensive guides, strategies, and resources."
+  description: "Knowledge base for the XXXIRA clan in Total Battle - Kingdom 284. Guides, strategies, and resources."
   
   # Navbar settings
   navbar:
     displayTitle: true
+    displayLogo: true
+    logo:
+      path: images/logo.svg
+      dark: images/logo-dark.svg
+      width: 40
+      height: 40
+  
+  # Page settings
+  page:
+    width: wide
+  
+  # Theme settings
+  theme:
+    default: dark
+    displayToggle: true
+  
+  # Footer settings
     displayLogo: true
     logo:
       path: images/logo.svg
@@ -76,13 +93,6 @@ params:
   social:
     github: "https://github.com/s-limone/XXXIRA"
   
-  # Analytics (optional - add your tracking ID)
-  # analytics:
-  #   google: "G-XXXXXXXXXX"
-  
-  # Comments (optional)
-  # comments:
-  #   enable: false
   
   # Custom CSS
   customCSS:
