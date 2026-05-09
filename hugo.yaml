@@ -48,23 +48,7 @@ params:
       dark: images/logo-dark.svg
       width: 40
       height: 40
-  
-  # Page settings
-  page:
-    width: wide
-  
-  # Theme settings
-  theme:
-    default: dark
-    displayToggle: true
-  
-  # Footer settings
-    displayLogo: true
-    logo:
-      path: images/logo.svg
-      dark: images/logo-dark.svg
-      width: 40
-      height: 40
+
   
   # Page settings
   page:
