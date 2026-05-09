@@ -33,7 +33,6 @@ menu:
     - name: GitHub
       weight: 5
       url: "https://github.com/s-limone/XXXIRA"
-      url: "https://github.com/s-limone/XXXIRA"
       params:
         icon: github
 
