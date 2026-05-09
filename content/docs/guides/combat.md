@@ -9,18 +9,6 @@ Battles in Total Battle are resolved automatically based on troop counts, tiers,
 
 Squads are sorted by total health — the squad with the **highest total health is attacked first**. This is the foundation of the stacking strategy below.
 
-## Troop Bonuses
-
-Each of the three leadership troop types has a different combat speciality:
-
-| Type | Special Bonus |
-|------|--------------|
-| **Guardsmen** | Bonus attack vs. **monsters** |
-| **Specialists** | Bonus attack vs. **other players** (base attack doubled in PvP) |
-| **Engineer Corps** | Bonus attack vs. **fortifications** (citadels, walls) |
-
-Each troop also has three traits that determine vulnerabilities and offensive advantages against specific unit types (Melee, Mounted, Ranged, Flying, etc.).
-
 ## March Limits
 
 Three separate limits control how many troops you can send:
@@ -51,6 +39,35 @@ Use double the amount of each lower tier. Example with G7 as your strongest Guar
 Apply the same pyramid within each troop category (G# for Guardsmen, S# for Specialists, E# for Engineer Corps, M# for Monsters).
 
 This pyramid ensures lower tiers have the highest total health pool, get targeted first, and die first — leaving your top-tier troops alive for more attacks.
+
+### Concrete Stacking Examples
+
+**Early–mid game player** (G5 highest, Leadership 40,000):
+
+| Tier | Melee | Mounted | Ranged | Flying |
+|------|-------|---------|--------|--------|
+| G5 (top) | 25 | 250 | 500 | 500 |
+| G4 | 50 | 500 | 1,000 | — |
+| G3 | 100 | 1,000 | 2,000 | — |
+
+**Mid game player** (G7 highest, Leadership 80,000, Dominance 2,000, Authority 500):
+
+| Tier | Melee | Mounted | Ranged | Flying |
+|------|-------|---------|--------|--------|
+| G7 (top) | 50 | 500 | 1,000 | 1,000 |
+| G6 | 100 | 1,000 | 2,000 | 2,000 |
+| G5 | 200 | 2,000 | 4,000 | 4,000 |
+
+**Advanced player** (G9/G8/S8 mixed, Leadership 150,000):
+
+| Tier | Melee | Mounted | Ranged | Flying |
+|------|-------|---------|--------|--------|
+| G9 (top) | 100 | 1,000 | 2,000 | 2,000 |
+| G8 | 200 | 2,000 | 4,000 | 4,000 |
+| S8 (sacrifice) | 210 | 2,010 | 4,010 | 4,010 |
+| G7 | 400 | 4,000 | 8,000 | 8,000 |
+
+> **Advanced tip:** E9 Catapults can be used as a sacrifice stack for more consistent attack patterns. S8 added as a sacrifice layer above causes Specialists to die before Guardsmen — protecting your best troops.
 
 ### Monster & Mercenary Placement
 
@@ -93,6 +110,7 @@ Use a calculator to get precise numbers:
 
 ## Further Reading
 
+- [Units & Troops](/docs/characters/units) — troop categories, tiers, and type bonuses
 - [tbattle.wiki — Troop Stacking](https://tbattle.wiki/troop-stacking)
 - [tbattle.wiki — Beginners Guide](https://tbattle.wiki/beginners-guide)
 - [Official Help — Types of Troops](https://scorewarrior.helpshift.com/hc/en/3-total-battle/faq/526-types-of-troops-1686658532/)

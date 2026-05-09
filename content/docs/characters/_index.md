@@ -1,13 +1,13 @@
 ---
-title: Characters
+title: Army & Forces
 sidebar:
   open: true
 ---
 
-Reference pages for every hero, captain, and unit type in XXXIRA.
+Your commanders and troops — everything that marches under the XXXIRA banner.
 
 {{< cards >}}
-  {{< card link="heroes" title="Heroes" icon="star" subtitle="Hero roster, stats, and abilities." >}}
-  {{< card link="captains" title="Captains" icon="user-circle" subtitle="Captain profiles and best builds." >}}
-  {{< card link="units" title="Units & Troops" icon="user-group" subtitle="Troop types, tiers, and counters." >}}
+  {{< card link="heroes" title="Heroes" icon="star" subtitle="Your primary commander: leveling, skills, and leadership limits." >}}
+  {{< card link="captains" title="Captains" icon="user-circle" subtitle="Named captains: bonuses, builds, and how to level them." >}}
+  {{< card link="units" title="Units & Troops" icon="user-group" subtitle="All five troop categories, tiers, monster sub-types, and counters." >}}
 {{< /cards >}}

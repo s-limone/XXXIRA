@@ -1,0 +1,554 @@
+/* ============================================
+   XXXIRA Wiki — Modern Dark Theme
+   ============================================ */
+
+:root, html {
+  color-scheme: dark;
+}
+
+:root {
+  --accent:        #4f8ef7;
+  --accent-dim:    rgba(79, 142, 247, 0.12);
+  --accent-border: rgba(79, 142, 247, 0.35);
+  --accent-glow:   rgba(79, 142, 247, 0.15);
+
+  --bg:            #0d0d10;
+  --bg-surface:    #13131a;
+  --bg-card:       #16161f;
+  --bg-hover:      #1c1c28;
+
+  --border:        rgba(255, 255, 255, 0.07);
+  --border-strong: rgba(255, 255, 255, 0.13);
+
+  --text:          #e8e8f0;
+  --text-muted:    #9090a8;
+  --text-faint:    #5a5a70;
+
+  --red:           #e63946;
+  --gold:          #f5a623;
+  --green:         #34d399;
+
+  --radius:        8px;
+  --radius-sm:     5px;
+  --shadow:        0 4px 24px rgba(0, 0, 0, 0.4);
+  --shadow-lg:     0 8px 40px rgba(0, 0, 0, 0.55);
+}
+
+/* ============================================
+   Base
+   ============================================ */
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: rgba(79, 142, 247, 0.28);
+  color: #fff;
+}
+
+/* ============================================
+   Typography
+   ============================================ */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Outfit', system-ui, sans-serif;
+  color: var(--text);
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+.content h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--border-strong);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.content h2::before {
+  content: '';
+  display: inline-block;
+  width: 3px;
+  height: 1.1em;
+  background: var(--accent);
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.content h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-top: 1.8rem;
+  margin-bottom: 0.6rem;
+}
+
+.content p {
+  color: var(--text);
+  line-height: 1.75;
+}
+
+/* ============================================
+   Navigation
+   ============================================ */
+
+.hextra-nav-container-blur {
+  background: rgba(13, 13, 16, 0.9) !important;
+  backdrop-filter: blur(16px) saturate(180%);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 1px 0 var(--border);
+}
+
+.hextra-nav-container a {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+  letter-spacing: 0.01em;
+}
+
+.hextra-nav-container a:hover {
+  color: var(--accent);
+  transition: color 0.15s ease;
+}
+
+/* ============================================
+   Hero Section
+   ============================================ */
+
+.content > h2.not-prose:first-child {
+  background: linear-gradient(160deg,
+    rgba(79, 142, 247, 0.08) 0%,
+    rgba(13, 13, 16, 0) 60%);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 4rem 2.5rem 3rem;
+  margin: 1.5rem 0 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.content > h2.not-prose:first-child::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), transparent 60%);
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+
+.content h1.not-prose {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(2.2rem, 6vw, 4rem) !important;
+  font-weight: 800;
+  color: var(--text) !important;
+  -webkit-text-fill-color: var(--text) !important;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: 0.75rem;
+}
+
+.content p.not-prose {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  color: var(--text-muted) !important;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  opacity: 1;
+}
+
+.content p.not-prose::after {
+  content: none;
+}
+
+/* ============================================
+   Cards
+   ============================================ */
+
+.hextra-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.hextra-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.75rem;
+  transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.hextra-card::before {
+  content: none;
+}
+
+.hextra-card::after {
+  content: none;
+}
+
+.hextra-card:hover {
+  border-color: var(--accent-border);
+  background: var(--bg-hover);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow), 0 0 0 1px var(--accent-border);
+}
+
+.hextra-card-icon {
+  color: var(--accent);
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  opacity: 0.9;
+}
+
+.hextra-card-subtitle {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.55;
+  margin-top: 0.35rem;
+}
+
+/* ============================================
+   Tables
+   ============================================ */
+
+.content table {
+  border-collapse: collapse;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  width: 100%;
+  font-size: 0.93rem;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+}
+
+.content th {
+  background: var(--bg-surface);
+  color: var(--text);
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border-strong);
+  text-align: left;
+}
+
+.content td {
+  padding: 0.7rem 1rem;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+  vertical-align: top;
+}
+
+.content tr:last-child td {
+  border-bottom: none;
+}
+
+.content tr:hover td {
+  background: var(--accent-dim);
+  transition: background 0.15s ease;
+}
+
+/* ============================================
+   Code Blocks
+   ============================================ */
+
+.content code {
+  background: var(--bg-surface);
+  color: var(--accent);
+  padding: 0.15rem 0.45rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.875em;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  border: 1px solid var(--border);
+}
+
+.content pre {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.content pre::before {
+  content: none;
+}
+
+/* ============================================
+   Links
+   ============================================ */
+
+.content a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.content a::after {
+  content: none;
+}
+
+.content a:hover {
+  color: #7aaeff;
+  border-bottom-color: rgba(79, 142, 247, 0.4);
+  text-shadow: none;
+}
+
+/* ============================================
+   Blockquotes
+   ============================================ */
+
+.content blockquote {
+  border-left: 3px solid var(--accent);
+  background: var(--accent-dim);
+  padding: 0.9rem 1.25rem;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  color: var(--text);
+  font-style: normal;
+  margin: 1.5rem 0;
+}
+
+.content blockquote::before {
+  content: none;
+}
+
+.content blockquote p {
+  margin: 0;
+}
+
+/* ============================================
+   Dividers
+   ============================================ */
+
+.content hr {
+  border: none;
+  height: 1px;
+  background: var(--border-strong);
+  margin: 2.5rem 0;
+}
+
+/* ============================================
+   Lists
+   ============================================ */
+
+.content ul, .content ol {
+  color: var(--text);
+  line-height: 1.75;
+  padding-left: 1.5rem;
+}
+
+.content li {
+  margin-bottom: 0.25rem;
+}
+
+.content li::marker {
+  color: var(--accent);
+}
+
+.content input[type="checkbox"] {
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+/* ============================================
+   Badges
+   ============================================ */
+
+.badge {
+  display: inline-block;
+  padding: 0.2rem 0.65rem;
+  border-radius: 20px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.badge-primary {
+  background: var(--accent-dim);
+  color: var(--accent);
+  border: 1px solid var(--accent-border);
+}
+
+.badge-gold {
+  background: rgba(245, 166, 35, 0.12);
+  color: var(--gold);
+  border: 1px solid rgba(245, 166, 35, 0.3);
+}
+
+/* ============================================
+   Sidebar
+   ============================================ */
+
+.hextra-sidebar-container {
+  background: rgba(13, 13, 16, 0.5);
+  border-right: 1px solid var(--border);
+}
+
+.hextra-sidebar-container a {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  transition: all 0.15s ease;
+  padding: 0.4rem 0.75rem;
+  border-radius: var(--radius-sm);
+}
+
+.hextra-sidebar-container a:hover {
+  color: var(--text);
+  background: var(--bg-hover);
+  border-left: none;
+  padding-left: 0.75rem;
+}
+
+.hextra-sidebar-container [data-active=true] a {
+  color: var(--accent);
+  background: var(--accent-dim);
+  border-left: 2px solid var(--accent);
+  padding-left: calc(0.75rem - 2px);
+  font-weight: 600;
+}
+
+/* ============================================
+   Footer
+   ============================================ */
+
+.hextra-footer {
+  background: var(--bg-surface);
+  border-top: 1px solid var(--border);
+  margin-top: 4rem;
+}
+
+/* ============================================
+   Scrollbar
+   ============================================ */
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* ============================================
+   Responsive
+   ============================================ */
+
+/* ============================================
+   Animations
+   ============================================ */
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Hero section entrance */
+.content > h2.not-prose:first-child {
+  animation: fadeUp 0.5s ease both;
+}
+
+/* Card entrance — stagger via nth-child */
+.hextra-card {
+  animation: fadeUp 0.4s ease both;
+}
+.hextra-card:nth-child(1) { animation-delay: 0.05s; }
+.hextra-card:nth-child(2) { animation-delay: 0.12s; }
+.hextra-card:nth-child(3) { animation-delay: 0.19s; }
+.hextra-card:nth-child(4) { animation-delay: 0.26s; }
+
+/* Accent bar on h2 — width grows in */
+.content h2::before {
+  animation: fadeIn 0.4s ease both;
+}
+
+/* Link underline slides in from left */
+.content a {
+  background-image: linear-gradient(var(--accent), var(--accent));
+  background-size: 0 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  border-bottom: none;
+  transition: background-size 0.25s ease, color 0.15s ease;
+}
+
+.content a:hover {
+  background-size: 100% 1px;
+  border-bottom: none;
+}
+
+/* Table rows fade in */
+.content tr {
+  transition: background 0.15s ease;
+}
+
+/* Sidebar link transitions already defined; add a left-slide */
+.hextra-sidebar-container a {
+  transition: color 0.15s ease, background 0.15s ease, padding-left 0.15s ease;
+}
+
+/* Page main content fade in */
+#content {
+  animation: fadeIn 0.35s ease both;
+}
+
+@media (max-width: 768px) {
+  .content > h2.not-prose:first-child {
+    padding: 2.5rem 1.25rem 2rem;
+  }
+
+  .hextra-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .content table {
+    font-size: 0.85rem;
+  }
+
+  .content th, .content td {
+    padding: 0.55rem 0.75rem;
+  }
+}

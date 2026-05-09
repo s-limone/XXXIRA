@@ -23,8 +23,8 @@ menu:
     - name: 🚀 Getting Started
       pageRef: /docs/getting-started
       weight: 2
-    - name: 👥 Characters
-      pageRef: /docs/characters
+    - name: ✅ Checklists
+      pageRef: /docs/checklists
       weight: 3
     - name: 🔍 Search
       weight: 4
@@ -57,7 +57,7 @@ params:
   # Theme settings
   theme:
     default: dark
-    displayToggle: true
+    displayToggle: false
   
   # Footer settings
   footer:
